@@ -39,7 +39,7 @@ SECRET_KEY = 'django-insecure-$#=yel7mr9+bo!-vh^nnzwpt50ktx*s23x12m!_p6w(=tir=@6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
@@ -135,8 +135,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
-django_heroku.settings(locals())
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")
 
 API_KEY = 'ongVqC5PHohwGO6m6uwdoF2dl2j4McJLn7VRtW4E'
 
